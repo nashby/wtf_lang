@@ -3,6 +3,7 @@
 require 'net/http'
 require 'json'
 require 'cgi'
+require "wtf_lang/language"
 
 module WtfLang
   class API
@@ -25,16 +26,8 @@ module WtfLang
       
       def detect(text)
         response = send(text)
-        parse(response)
-      end
-      
-      def lang(text)
-        detect(text)["responseData"]["language"]
-      end
-      
-      #A numeric value between 0-1.0 that represents the confidence level in the language code for the given text.
-      def lang_confidence(text)
-        [detect(text)["responseData"]["language"], detect(text)["responseData"]["confidence"]]
+        response_data = parse(response)["responseData"]
+        Language.new(response_data["language"], response_data["confidence"])
       end
       
     end

@@ -4,22 +4,26 @@ require "wtf_lang/api"
 require "wtf_lang/languages"
 
 class String
+  def detect_lang
+    @detected_lang ||= WtfLang::API.detect self
+  end
+  
   def lang
-    WtfLang::API.lang self
+    detect_lang.lang
   end
   
   def full_lang
-    WtfLang::LANGUAGES.key(WtfLang::API.lang self)
+    detect_lang.full_lang
   end
   
   def lang_confidence
-    WtfLang::API.lang_confidence self
+    detect_lang.lang_confidence
   end
   
   WtfLang::LANGUAGES.each do |lang, code|
     self.class_eval <<-RUBY
         def #{code}?
-          WtfLang::API.lang(self) == "#{code}"
+          lang == "#{code}"
         end
     RUBY
   end
