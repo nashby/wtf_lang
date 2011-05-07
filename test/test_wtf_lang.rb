@@ -3,7 +3,6 @@
 require 'helper'
 
 class TestWtfLang < Test::Unit::TestCase
-  
   should "return en language" do
     assert_equal "en", "ruby is so awesome!".lang
   end
@@ -26,6 +25,10 @@ class TestWtfLang < Test::Unit::TestCase
   
   should "return confidence" do
     assert "руби такой крутой!".lang_confidence.kind_of? Array
+  end
+  
+  should "return en language for symbol" do
+    assert_equal "en", :"ruby is so awesome!".lang
   end
   
 end

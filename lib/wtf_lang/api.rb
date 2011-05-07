@@ -25,7 +25,7 @@ module WtfLang
       end
       
       def detect(text)
-        response = send(text)
+        response = send(text.to_s)
         response_data = parse(response)["responseData"]
         Language.new(response_data["language"], response_data["confidence"])
       end

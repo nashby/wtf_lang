@@ -1,6 +1,6 @@
 #encoding: utf-8
 require 'wtf_lang/core_ext/extension'
 
-class String
+class Symbol
   include WtfLang::Extension
 end
