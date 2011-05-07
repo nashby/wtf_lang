@@ -11,16 +11,22 @@ rescue Bundler::BundlerError => e
 end
 require 'rake'
 
+$LOAD_PATH.unshift('lib')
+
 require 'jeweler'
+require 'wtf_lang/version'
+
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "wtf_lang"
   gem.homepage = "http://github.com/nashby/wtf_lang"
+  gem.version = WtfLang::Version::STRING
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{An awesome language detector}
+  gem.description = %Q{Can't stop dreaming about an easy language detector? Just use wtf_lang!}
   gem.email = "younash@gmail.com"
   gem.authors = ["nashby"]
+  gem.files.include Dir.glob('lib/**/*.rb')
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -44,7 +50,7 @@ task :default => :test
 
 require 'rake/rdoctask'
 Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
+  version = WtfLang::Version::STRING
 
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "wtf_lang #{version}"

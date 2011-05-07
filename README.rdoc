@@ -1,6 +1,23 @@
 = wtf_lang
 
-Description goes here.
+Can't stop dreaming about an easy language detector? Just use wtf_language!
+
+== Install
+
+  gem install wtf_lang
+  
+== Usage
+
+  require 'wtf_lang'
+  
+  "ruby is so awesome!".lang # => "en"
+  "ruby is so awesome!".full_lang # => "ENGLISH"
+  
+  #with a numeric value between 0-1.0 that represents the confidence level in the language code for the given text. 
+  "ruby is so awesome!".lang_confidence # => ["en", 0.15502742]
+  
+  "ruby is so awesome!".en? # => true
+  
 
 == Contributing to wtf_lang
  
