@@ -16,11 +16,15 @@ class TestWtfLang < Test::Unit::TestCase
   end
   
   should "return full language name" do
-    assert_equal "RUSSIAN", "руби такой крутой!".full_lang
+    assert_equal "russian", "руби такой крутой!".full_lang
   end
   
   should "return assert language" do
     assert "ruby is so awesome!".en?
+  end
+
+  should "return assert with full language name" do
+    assert "ruby is so awesome!".english?
   end
   
   should "return confidence" do

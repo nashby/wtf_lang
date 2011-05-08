@@ -1,6 +1,6 @@
 ### wtf_lang
 
-Can't stop dreaming about an easy language detector? Just use wtf_language!
+Can't stop dreaming about an easy language detector? Just use wtf_lang!
 
 ### Install
 
@@ -17,12 +17,13 @@ Can't stop dreaming about an easy language detector? Just use wtf_language!
     "ruby is so awesome!".lang_confidence # => ["en", 0.15502742]
   
     "ruby is so awesome!".en? # => true
+    "ruby is so awesome!".english? # => true
   
 If you want to cache results to make less requests to google API, use variables
   
     text = "ruby is so awesome!"
     text.lang #=> "en"
-    text.full_lang #=> "ENGLISH"
+    text.full_lang #=> "english"
   
 It works with symbols too!
 

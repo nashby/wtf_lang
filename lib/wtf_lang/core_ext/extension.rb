@@ -20,10 +20,13 @@ module WtfLang
       detect_lang.lang_confidence
     end
     
-    WtfLang::LANGUAGES.each do |lang, code|
+    WtfLang::LANGUAGES.each do |full_lang_name, code_lang_name|
       self.class_eval <<-RUBY
-          def #{code}?
-            lang == "#{code}"
+          def #{code_lang_name}?
+            lang == "#{code_lang_name}"
+          end
+          def #{full_lang_name}?
+            full_lang == "#{full_lang_name}"
           end
       RUBY
     end
