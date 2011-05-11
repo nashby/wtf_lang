@@ -14,6 +14,14 @@ class TestWtfLang < Test::Unit::TestCase
   should "return jp language" do
     assert_equal "ja", "ルビーはとても素晴らしいです！".lang
   end
+
+  should "return eo language" do
+    assert_equal "eo", "Eĥoŝanĝo ĉiŭĵaŭde!".lang
+  end
+
+  should "return esperanto language" do
+    assert_equal "esperanto", "Esperanton ĉiuj parolos!".full_lang
+  end
   
   should "return full language name" do
     assert_equal "russian", "руби такой крутой!".full_lang
