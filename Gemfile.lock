@@ -11,6 +11,7 @@ GEM
     shoulda (2.11.3)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
