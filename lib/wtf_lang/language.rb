@@ -10,7 +10,11 @@ module WtfLang
     end
     
     def full_lang
-      LANGUAGES.key(lang)
+      if Hash.method_defined? :key
+        LANGUAGES.key(lang)
+      else
+        LANGUAGES.index(lang)
+      end
     end
     
     def lang_confidence

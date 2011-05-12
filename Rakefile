@@ -27,7 +27,7 @@ Jeweler::Tasks.new do |gem|
   gem.email = "younash@gmail.com"
   gem.authors = ["nashby"]
   gem.files.include Dir.glob('lib/**/*.rb')
-  # dependencies defined in Gemfile
+  gem.add_dependency 'json'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
