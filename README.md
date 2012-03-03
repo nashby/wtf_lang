@@ -16,7 +16,8 @@ WtfLang::API.key = "your_api_key" # you can get it here http://detectlanguage.co
 "ruby is so awesome!".lang # => "en"
 "ruby is so awesome!".full_lang # => "ENGLISH"
 
-# numeric value between 0-1.0 that represents the confidence level in the language code for the given text.
+# numeric value between 0-1.0 that represents 
+# the confidence level in the language code for the given text.
 "ruby is so awesome!".lang_confidence # => ["en", 0.15502742]
 
 "ruby is so awesome!".en? # => true
