@@ -21,7 +21,7 @@ module WtfLang
     'czech' => 'cs',
     'danish' => 'da',
     'dhivehi' => 'dv',
-    'dutch'=> 'nl',  
+    'dutch'=> 'nl',
     'english' => 'en',
     'esperanto' => 'eo',
     'estonian' => 'et',
