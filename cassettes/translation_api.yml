@@ -1,117 +1,151 @@
 ---
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :get
-    uri: http://ws.detectlanguage.com:80/0.2/detect?key=d33374afd5d2c55e1f5183e00736510a&q=ruby%20is%20so%20awesome!
-    body: !!null 
-    headers: !!null 
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
+http_interactions:
+- request:
+    method: get
+    uri: http://ws.detectlanguage.com/0.2/detect?key=demo&q=ruby%20is%20so%20awesome!
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
       code: 200
       message: OK
     headers:
-      content-type:
+      Content-Type:
       - application/json;charset=utf-8
-      connection:
+      Connection:
       - keep-alive
-      status:
+      Status:
       - '200'
-      x-powered-by:
+      X-Powered-By:
       - Phusion Passenger (mod_rails/mod_rack) 3.0.6
-      x-frame-options:
+      X-Frame-Options:
       - sameorigin
-      x-xss-protection:
+      X-Xss-Protection:
       - 1; mode=block
-      content-length:
+      Content-Length:
       - '162'
-      server:
+      Server:
       - nginx/0.8.54 + Phusion Passenger 3.0.6 (mod_rails/mod_rack)
-    body: ! '{"data":{"detections":[{"isReliable":false,"confidence":0.137763371150729,"language":"en"},{"isReliable":false,"confidence":0.0441014332965821,"language":"sl"}]}}'
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :get
-    uri: http://ws.detectlanguage.com:80/0.2/detect?key=d33374afd5d2c55e1f5183e00736510a&q=%D1%80%D1%83%D0%B1%D0%B8%20%D1%82%D0%B0%D0%BA%D0%BE%D0%B9%20%D0%BA%D1%80%D1%83%D1%82%D0%BE%D0%B9!
-    body: !!null 
-    headers: !!null 
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"detections":[{"isReliable":false,"confidence":0.137763371150729,"language":"en"},{"isReliable":false,"confidence":0.0441014332965821,"language":"sl"}]}}'
+    http_version: !!null 
+  recorded_at: Sat, 03 Mar 2012 21:26:33 GMT
+- request:
+    method: get
+    uri: http://ws.detectlanguage.com/0.2/detect?key=demo&q=%D1%80%D1%83%D0%B1%D0%B8%20%D1%82%D0%B0%D0%BA%D0%BE%D0%B9%20%D0%BA%D1%80%D1%83%D1%82%D0%BE%D0%B9!
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
       code: 200
       message: OK
     headers:
-      content-type:
+      Content-Type:
       - application/json;charset=utf-8
-      connection:
+      Connection:
       - keep-alive
-      status:
+      Status:
       - '200'
-      x-powered-by:
+      X-Powered-By:
       - Phusion Passenger (mod_rails/mod_rack) 3.0.6
-      x-frame-options:
+      X-Frame-Options:
       - sameorigin
-      x-xss-protection:
+      X-Xss-Protection:
       - 1; mode=block
-      content-length:
+      Content-Length:
       - '92'
-      server:
+      Server:
       - nginx/0.8.54 + Phusion Passenger 3.0.6 (mod_rails/mod_rack)
-    body: ! '{"data":{"detections":[{"isReliable":true,"confidence":0.247718383311604,"language":"ru"}]}}'
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :get
-    uri: http://ws.detectlanguage.com:80/0.2/detect?key=d33374afd5d2c55e1f5183e00736510a&q=%E3%83%AB%E3%83%93%E3%83%BC%E3%81%AF%E3%81%A8%E3%81%A6%E3%82%82%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%84%E3%81%A7%E3%81%99!
-    body: !!null 
-    headers: !!null 
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"detections":[{"isReliable":true,"confidence":0.247718383311604,"language":"ru"}]}}'
+    http_version: !!null 
+  recorded_at: Sat, 03 Mar 2012 21:26:33 GMT
+- request:
+    method: get
+    uri: http://ws.detectlanguage.com/0.2/detect?key=demo&q=1234
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
       code: 200
       message: OK
     headers:
-      content-type:
+      Content-Type:
       - application/json;charset=utf-8
-      connection:
+      Connection:
       - keep-alive
-      status:
+      Status:
       - '200'
-      x-powered-by:
+      X-Powered-By:
       - Phusion Passenger (mod_rails/mod_rack) 3.0.6
-      x-frame-options:
+      X-Frame-Options:
       - sameorigin
-      x-xss-protection:
+      X-Xss-Protection:
       - 1; mode=block
-      content-length:
-      - '79'
-      server:
-      - nginx/0.8.54 + Phusion Passenger 3.0.6 (mod_rails/mod_rack)
-    body: ! '{"data":{"detections":[{"isReliable":true,"confidence":1.44,"language":"ja"}]}}'
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :get
-    uri: http://ws.detectlanguage.com:80/0.2/detect?key=d33374afd5d2c55e1f5183e00736510a&q=1234
-    body: !!null 
-    headers: !!null 
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 200
-      message: OK
-    headers:
-      content-type:
-      - application/json;charset=utf-8
-      connection:
-      - keep-alive
-      status:
-      - '200'
-      x-powered-by:
-      - Phusion Passenger (mod_rails/mod_rack) 3.0.6
-      x-frame-options:
-      - sameorigin
-      x-xss-protection:
-      - 1; mode=block
-      content-length:
+      Content-Length:
       - '26'
-      server:
+      Server:
       - nginx/0.8.54 + Phusion Passenger 3.0.6 (mod_rails/mod_rack)
-    body: ! '{"data":{"detections":[]}}'
-    http_version: '1.1'
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"detections":[]}}'
+    http_version: !!null 
+  recorded_at: Sat, 03 Mar 2012 21:26:34 GMT
+- request:
+    method: get
+    uri: http://ws.detectlanguage.com/0.2/detect?key=demo&q=%E3%83%AB%E3%83%93%E3%83%BC%E3%81%AF%E3%81%A8%E3%81%A6%E3%82%82%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%84%E3%81%A7%E3%81%99!
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - '200'
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.6
+      X-Frame-Options:
+      - sameorigin
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '79'
+      Server:
+      - nginx/0.8.54 + Phusion Passenger 3.0.6 (mod_rails/mod_rack)
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"detections":[{"isReliable":true,"confidence":1.44,"language":"ja"}]}}'
+    http_version: !!null 
+  recorded_at: Sat, 03 Mar 2012 21:26:34 GMT
+recorded_with: VCR 2.0.0.rc2

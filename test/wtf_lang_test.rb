@@ -4,7 +4,7 @@ require 'test_helper'
 
 describe WtfLang do
   before do
-    WtfLang::API.key = ENV['WTFLANG_KEY']
+    WtfLang::API.key = 'demo'
 
     VCR.insert_cassette('translation_api')
   end
